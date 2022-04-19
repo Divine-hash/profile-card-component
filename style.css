@@ -26,7 +26,91 @@ body {
   background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 850px, 850px;
-  background-position: -50% 50%, 130% -50%;
+  background-position: top -425px left -250px, bottom -500px right -225px;
   font-family: "Kumbh Sans";
   line-height: 1.5;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  height: 400px;
+  width: 350px;
+  color: var(--dark-grayish-blue);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card__hero {
+  height: 160px;
+  background: url("./images/bg-pattern-card.svg");
+}
+
+.card__data {
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.card__data img {
+  display: block;
+  border-radius: 50%;
+  height: 110px;
+  margin: -55px auto;
+  border: 5px solid #fff;
+}
+
+.card__data div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  margin-top: 65px;
+}
+
+.card__data h1 {
+  font-size: 18px;
+  color: var(--very-dark-blue);
+}
+
+.card__stats {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 12px;
+}
+
+.card__stats span{
+  display: block;
+}
+
+.card__stats span:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    background-position: top -500px left -600px, bottom -500px right -550px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: 500px, 500px;
+    background-position: top -270px left -330px, bottom -220px right -320px;
+  }
+  .card {
+    width: 325px;
+  }
 }
